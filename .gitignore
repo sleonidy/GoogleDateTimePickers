@@ -1,4 +1,6 @@
 bin
-library/GoogleDateTimePickers/bin
-sample/Pickers Sample/gen
-library/GoogleDateTimePickers/gen
+library/build
+sample/build
+library/gen
+library/.settings
+.idea

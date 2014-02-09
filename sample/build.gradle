@@ -1,0 +1,40 @@
+buildscript {
+    dependencies {
+        classpath 'com.jakewharton.hugo:hugo-plugin:+'
+
+    }
+}
+apply plugin: 'android'
+apply plugin: 'hugo'
+
+dependencies {
+    compile project(':library')
+    compile 'com.android.support:support-v4:+'
+    compile 'com.cubeactive.martin.inscription:inscription:1.2.0-SNAPSHOT@aar'
+}
+
+android {
+    compileSdkVersion Integer.parseInt(project.COMPILE_SDK_VERSION)
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
+        minSdkVersion Integer.parseInt(project.MIN_SDK_VERSION)
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+
+
