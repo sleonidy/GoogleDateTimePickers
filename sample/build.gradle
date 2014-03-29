@@ -1,16 +1,9 @@
-buildscript {
-    dependencies {
-        classpath 'com.jakewharton.hugo:hugo-plugin:+'
 
-    }
-}
 apply plugin: 'android'
-apply plugin: 'hugo'
 
 dependencies {
     compile project(':library')
     compile 'com.android.support:support-v4:+'
-    compile 'com.cubeactive.martin.inscription:inscription:1.2.0-SNAPSHOT@aar'
 }
 
 android {

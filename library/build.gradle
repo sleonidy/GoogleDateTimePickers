@@ -1,6 +1,5 @@
 apply plugin: 'android-library'
 
-
 dependencies {
     compile "com.android.support:support-v4:+"
 }
@@ -18,3 +17,4 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 }
+
